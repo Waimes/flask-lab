@@ -1,8 +1,10 @@
 stages:
-  - build
+  - test
 
-build:
-  stage: build
+test_job:
+  stage: test
+  image: python:3.8.10
+  before_script:
+    - pip install flask
   script:
-    - pip3 install flask
-    - python3 ./flaskapp/some_app.py
+    - python ./flaskapp/some_app.py
