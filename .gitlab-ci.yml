@@ -1,0 +1,8 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - pip3 install flask
+    - python3 ./flaskapp/some_app.py
